@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Clientes</title>
+  <link rel="stylesheet" type="text/css" href="styles.css">
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+  <header>
+    <h1>Clientes</h1>
+  </header>
+  <div class="search-container">
+    <div class="search-box">
+      <input type="text" id="searchInput" placeholder="Buscar clientes...">
+      <button id="searchButton"><img src="img/lupa.png" alt="Buscar"></button>
+    </div>
+    <button id="addClientButton" class="add-client-button">Añadir Cliente</button>
+  </div>
+  <div id="results"></div>
+
+  <div id="addClientModal" class="modal">
+    <div class="modal-content">
+      <span class="close">&times;</span>
+      <h2>Añadir Nuevo Cliente</h2>
+      <form id="addClientForm">
+        <label for="nombre">Nombre:</label>
+        <input type="text" id="nombre" name="nombre" required>
+        <label for="apellido">Apellido:</label>
+        <input type="text" id="apellido" name="apellido" required>
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="email" required>
+        <label for="imagen">Foto:</label>
+        <input type="file" id="imagen" name="imagen" accept="image/*" required>
+        <button type="submit">Añadir</button>
+      </form>
+    </div>
+  </div>
+
+  <div id="editClientModal" class="modal">
+    <div class="modal-content">
+      <span class="close">&times;</span>
+      <h2>Editar Cliente</h2>
+      <form id="editClientForm">
+        <label for="editNombre">Nombre:</label>
+        <input type="text" id="editNombre" name="editNombre" required>
+        <label for="editApellido">Apellido:</label>
+        <input type="text" id="editApellido" name="editApellido" required>
+        <label for="editEmail">Email:</label>
+        <input type="email" id="editEmail" name="editEmail" required>
+        <label for="editImagen">Foto:</label>
+        <input type="file" id="editImagen" name="editImagen" accept="image/*">
+        <button type="submit">Guardar Cambios</button>
+      </form>
+    </div>
+  </div>
+
+  <script src="main.js"></script>
+</body>
+</html>
